@@ -1,6 +1,6 @@
 import UIKit
 import XCTest
-import MPGoogleAnalytics
+//import MPGoogleAnalytics
 
 class Tests: XCTestCase {
     

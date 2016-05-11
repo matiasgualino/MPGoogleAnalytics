@@ -311,6 +311,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 80B798CCEE35BC07E9A971A4 /* Pods-MPGoogleAnalytics_Tests.debug.xcconfig */;
 			buildSettings = {
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -321,6 +322,12 @@
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = mh_dylib;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"MPGoogleAnalytics\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -330,12 +337,19 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 10EBF9F5920C0082BACCF8B8 /* Pods-MPGoogleAnalytics_Tests.release.xcconfig */;
 			buildSettings = {
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = mh_dylib;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"MPGoogleAnalytics\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
