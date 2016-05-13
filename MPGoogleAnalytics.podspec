@@ -31,12 +31,24 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'MPGoogleAnalytics/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'MPGoogleAnalytics' => ['MPGoogleAnalytics/Assets/*.png']
-  # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+s.compiler_flags = '-framework "UIKit"', '-ObjC', '$(inherited)'
+
+s.preserve_paths = 'MPGoogleAnalytics/**', 'Example/**'
+
+s.vendored_libraries = 'MPGoogleAnalytics/Classes/libGoogleAnalyticsServices.a'
+
+other_frameworks =  ['UIKit', 'CoreData', 'SystemConfiguration', 'Foundation']
+
+other_ldflags = '$(inherited) -framework UIKit -framework CoreData -framework SystemConfiguration -framework Foundation -lz -lstdc++'
+
+s.xcconfig     = {
+
+'OTHER_LDFLAGS[arch=arm64]'  => other_ldflags,
+'OTHER_LDFLAGS[arch=armv7]'  => other_ldflags,
+'OTHER_LDFLAGS[arch=i386]'  => other_ldflags,
+'OTHER_LDFLAGS[arch=x86_64]'  => other_ldflags,
+'OTHER_LDFLAGS[arch=armv7s]' => other_ldflags
+}
+
 end
