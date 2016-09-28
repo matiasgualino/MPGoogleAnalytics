@@ -3,7 +3,7 @@
 
 if [ $# -eq 0 ]
   then
-    echo "Need tag version! Ex: 0.2.5"
+    echo "Need tag version! Ex: 0.2.6"
     exit 0
 fi
 
