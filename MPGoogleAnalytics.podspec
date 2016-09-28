@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "MPGoogleAnalytics"
-  s.version          = "0.2.5"
+  s.version          = "0.2.9"
   s.summary          = "A short description of MPGoogleAnalytics."
 
 # This description is used to generate tags and improve search results.
