@@ -3,14 +3,14 @@
 
 if [ $# -eq 0 ]
   then
-    echo "Need tag version! Ex: 0.2.4"
+    echo "Need tag version! Ex: 0.2.5"
     exit 0
 fi
 
 VERSION=$1
 PROJECT="MPGoogleAnalytics"
 PODSPEC_FILE="$PROJECT.podspec"
-GIT_BRANCH="master"
+GIT_BRANCH="gaswift3migration"
 
 if [ "$#" -eq 2 ]
   then
